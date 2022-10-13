@@ -9,7 +9,7 @@ import './SearchPage.css'
 
 // -- react imports -- //
 import React, { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
 
 import ComedianItem from '../ComedianItem/ComedianItem.jsx';
