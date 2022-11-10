@@ -9,7 +9,7 @@ import './SearchPage.css'
 
 // -- react imports -- //
 import React, { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux'
 import { useHistory, useParams } from 'react-router-dom';
 
 import ComedianItem from '../ComedianItem/ComedianItem.jsx';
@@ -214,7 +214,6 @@ function SearchPage() {
               <Grid container >
               <TextField variant="outlined"
                 // placeholder='City'
-                // label="Search City" variant="outlined"
                 margin="auto"
                 value={city}
                 onChange={(event) => setCity(event.target.value)} />
@@ -241,7 +240,7 @@ function SearchPage() {
           {search && search.map(comedian => {
             return (
               // <div key={comedian.id} onClick={() => clickIcon (comedian.id)}> 
-              <Grid item key={comedian.id}>
+              <Grid item key={comedian.id} >
                 <ComedianItem comedianProp={comedian} />
               </Grid>
             );

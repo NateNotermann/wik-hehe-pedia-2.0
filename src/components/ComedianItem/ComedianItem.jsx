@@ -2,6 +2,7 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { useHistory, } from 'react-router-dom';
 
+import './ComedianItem.css';
 // --- item to render a single comedian's 
 // id, first name, last name, icon and a favorite or unfavorite button.
 // will be used any time we are .map()ing 
@@ -99,34 +100,77 @@ function ComedianItem({ comedianProp }) {
             {/* <button onClick={() => deleteFavorite(comedianProp.id)}>deleteFavorite</button> */}
 
 
-            <Card >
+            <Card className="card">
                 <CardMedia key={comedianProp.id} onClick={() => clickIcon(comedianProp.id)}
                     component="img"
                     height="194"
+
                     image={comedianProp.icon}
                     alt={comedianProp.name}
 
                 />
-                
-                <CardHeader
-                    action={
-                        <Tooltip title="Favorite">
-                            <IconButton aria-label="add to favorites">
-                                <FavoriteIcon color="primary" onClick={() => addFavorite(comedianProp.id)} />
-                            </IconButton>
-                        </Tooltip>
-                    }
-                    title={comedianProp.first_name + space + comedianProp.last_name}
+
+                {/* <CardHeader align="center" className="name"
+                    // titleTypographyProps={{
+                    //     fontSize: "2vh",
+                    // }}
+                    // action={
+                    //     <Tooltip title="Favorite">
+                    //         <IconButton aria-label="add to favorites">
+                    //             <FavoriteIcon color="secondary" onClick={() => addFavorite(comedianProp.id)} />
+                    //         </IconButton>
+                    //     </Tooltip>
+                    // }
+                    // title={comedianProp.first_name + space + comedianProp.last_name}
                     location={comedianProp.city}
-                />
+                /> */}
 
                 <Typography
+                    margin=".5rem"
                     className={"MuiTypography--heading"}
-                    variant={"h6"}
+                    // variant={"h6"}
                     // gutterBottom
                     color='text.secondary'
                 >
-                    
+                    <Grid container
+                        //  justifyContent="center"
+                        xs={12}
+                        justifyContent="space-around"
+                        // alignItems="stretch"
+                        alignItems="center"
+                    >
+                        <Grid item ></Grid>
+
+                        <Grid item >
+                            <Grid item></Grid>
+                            <Typography className="typo" xs={{ fontSize: "2vh" }}
+
+                                color="text.primary" variant={"h5"} >
+                                {comedianProp.first_name}
+                            </Typography>
+
+                            <Typography className="typo" xs={{ fontSize: "2vh" }}
+                                color="text.primary" variant={"h5"} >
+                                {comedianProp.last_name}
+                            </Typography>
+                        </Grid>
+
+                        <Grid item  >
+                            <Tooltip title="Favorite">
+                                <IconButton aria-label="add to favorites">
+                                    <FavoriteIcon color="secondary" onClick={() => addFavorite(comedianProp.id)} />
+                                </IconButton>
+                            </Tooltip>
+                        </Grid>
+
+                    </Grid>
+                    {/* 
+
+                    <Tooltip title="Favorite">
+                            <IconButton aria-label="add to favorites">
+                                <FavoriteIcon color="secondary" onClick={() => addFavorite(comedianProp.id)} />
+                            </IconButton>
+                        </Tooltip> */}
                     {/* <Button aria-label="settings"
                         color='fifthBlack'>
                         {comedianProp.first_name} {comedianProp.last_name}
@@ -161,6 +205,11 @@ function ComedianItem({ comedianProp }) {
                             </IconButton>
                         </Tooltip>
 
+                        {/* <Tooltip title="Favorite">
+                            <IconButton aria-label="add to favorites">
+                                <FavoriteIcon color="secondary" onClick={() => addFavorite(comedianProp.id)} />
+                            </IconButton>
+                        </Tooltip> */}
                         {/* <Tooltip title="Favorite">
                             <IconButton aria-label="add to favorites">
                                 <FavoriteIcon onClick={() => addFavorite(comedianProp.id)} />

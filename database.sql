@@ -1,8 +1,6 @@
+-- The below SQL queries will set up the entire database, including 3 tables and all comedians data.  
+-- All you need to do is copy & paste all of the code below into Postico, and click execute. -- 
 
--- USER is a reserved keyword with Postgres
--- You must use double quotes in every query that user is in:
--- ex. SELECT * FROM "user";
--- Otherwise you will have errors!
 
 ---------- START -- COPY --- AND -- PASTE -- HERE ----------
 
@@ -37,6 +35,12 @@ CREATE TABLE "favorites" (
 "user_id" INT REFERENCES "user" ON DELETE CASCADE NOT NULL,
 "comedian_id" INT REFERENCES "comedians" ON DELETE CASCADE NOT NULL
 );
+
+
+-- ADD Admin and USER 1 -- 
+INSERT INTO "user" ( "username", "password", "name", "access_level" ) VALUES 
+( 'admin', '$2a$10$cdwGyp.FbNfJczpdYd2s5O0aH5IGiCh0kvHCSmcCSKK25bRFuBLGa', 'Admin', 1),  --admin, password is: "admin"
+( 'user1', '$2a$10$kztK6AtXpJ2dNyegvTyOQeDfh./6TnL8.SrB6SNAzQaahG/BLdIdO', 'user1', 3); -- user 1, password is: "user1"
 
 ------ COMEDIAN DATA ------
 INSERT INTO "comedians" ("first_name", "last_name", "icon", "genre", "instagram_link", "twitter_link","youtube_link", "website_link", "city" )
@@ -74,10 +78,6 @@ VALUES
 ('Ramy','Youssef','images/Icons/IconsRamy.jpg','Millennial','https://www.instagram.com/ramy/','link','link','link','New York')
 ;
 
--- ADD Admin and USER 1 -- 
-INSERT INTO "user" ( "username", "password", "name", "access_level" ) VALUES 
-( 'admin', '$2a$10$OsPuAKcp4ip.sb2zZUM9vuJwhoRdGdJVcbIlWobbX4XbFPcg8Zjey', 'Admin', 1),  --Admin 1, password prime
-( 'person1', '$2a$10$OsPuAKcp4ip.sb2zZUM9vuJwhoRdGdJVcbIlWobbX4XbFPcg8Zjey', 'Nate', 3); -- user 1, password prime
 
 ---------- STOP -- COPY --- AND -- PASTE -- HERE ----------
 
