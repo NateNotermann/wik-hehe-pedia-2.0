@@ -106,7 +106,7 @@ function SearchPage() {
     }
     else if (event.target.className === 'city') {
       console.log('Searching city:', city);
-      dispatch({
+      dispatch({ 
         type: 'START_SEARCH',
         payload: {
           className: event.target.className,
@@ -114,13 +114,22 @@ function SearchPage() {
         }
       });
     }
-
+    clearSearchInputs()
     // dispatch({
     //   type: 'START_SEARCH',
     //   payload: {
     //     className: event.target.className,
     //     searchItem: searchItem}
     // });
+
+  }
+
+  function clearSearchInputs() {
+    setFirstName('')
+    setLastName('')
+    setGenre('')
+    setCity('')
+    console.log('Cleared Inputs');
 
   }
 
