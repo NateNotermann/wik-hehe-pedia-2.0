@@ -70,6 +70,7 @@ Before you get started, make sure you have the following software installed on y
 The below SQL queries will set up the **entire database**, including 3 tables and **all comedians data**.  
 All you need to do is copy & paste all of the code below into Postico, and click execute. The included database.sql file is identical for easy importing directly from postico.
 
+<!--
 ```SQL
 --------- START -- COPY --- AND -- PASTE -- HERE ----------
 
@@ -147,6 +148,7 @@ VALUES
 ;
 
 ```
+-->
 
 If you would like to name your database something else, you will need to change `prime_app` to the name of your new database name in `server/modules/pool.js`
 
