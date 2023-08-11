@@ -15,6 +15,18 @@
     
 }
 
+.card {
+  max-height: 22em;
+  min-height: 22em;
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  max-height: 4em;
+  min-height: 4em;
+}
+
 @keyframes shake {
     0% { transform: translate(1px, 1px); }
     50% { transform: translate(1px, -5px); }
