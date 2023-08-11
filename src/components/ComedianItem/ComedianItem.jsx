@@ -83,11 +83,14 @@ function ComedianItem({ comedianProp }) {
 
 
     // console.log('comedianProp', comedianProp);
-    return (<>
-        <Grid item className="comedianItem"
-        // item align="center"
+    return (
+      <>
+        <Grid
+          item
+          className="comedianItem"
+          // item align="center"
         >
-            {/* <Grid item className="nameAndPic" onClick={() => clickIcon(comedianProp.id)}
+          {/* <Grid item className="nameAndPic" onClick={() => clickIcon(comedianProp.id)}
             >
                 <h3>{comedianProp.first_name} {comedianProp.last_name} </h3>
                 <Typography>{comedianProp.first_name} {comedianProp.last_name}</Typography>
@@ -97,20 +100,19 @@ function ComedianItem({ comedianProp }) {
                     
             </Grid>
             <Button variant="contained" onClick={() => addFavorite(comedianProp.id)}>Favorite</Button> */}
-            {/* <button onClick={() => deleteFavorite(comedianProp.id)}>deleteFavorite</button> */}
+          {/* <button onClick={() => deleteFavorite(comedianProp.id)}>deleteFavorite</button> */}
 
+          <Card className="card">
+            <CardMedia
+              key={comedianProp.id}
+              onClick={() => clickIcon(comedianProp.id)}
+              component="img"
+              height="194"
+              image={comedianProp.icon}
+              alt={comedianProp.name}
+            />
 
-            <Card className="card">
-                <CardMedia key={comedianProp.id} onClick={() => clickIcon(comedianProp.id)}
-                    component="img"
-                    height="194"
-
-                    image={comedianProp.icon}
-                    alt={comedianProp.name}
-
-                />
-
-                {/* <CardHeader align="center" className="name"
+            {/* <CardHeader align="center" className="name"
                     // titleTypographyProps={{
                     //     fontSize: "2vh",
                     // }}
@@ -125,111 +127,119 @@ function ComedianItem({ comedianProp }) {
                     location={comedianProp.city}
                 /> */}
 
-                <Typography
-                    margin=".5rem"
-                    className={"MuiTypography--heading"}
-                    // variant={"h6"}
-                    // gutterBottom
-                    color='text.secondary'
-                >
-                    <Grid container
-                        //  justifyContent="center"
-                        xs={12}
-                        justifyContent="space-around"
-                        // alignItems="stretch"
-                        alignItems="center"
-                    >
-                        <Grid item ></Grid>
+            <Typography
+              margin=".5rem"
+              className={"MuiTypography--heading"}
+              // variant={"h6"}
+              // gutterBottom
+              color="text.secondary"
+            >
+              <Grid
+                container className="name"
+                //  justifyContent="center"
+                xs={12}
+                // justifyContent="space-around"
+                // alignItems="stretch"
+                alignItems="center" >
+                <Grid item></Grid>
 
-                        <Grid item >
-                            <Grid item></Grid>
-                            <Typography className="typo" xs={{ fontSize: "2vh" }}
+                <Grid item>
+                  <Grid item></Grid>
+                  <Typography
+                    className="typo"
+                    xs={{ fontSize: "2vh" }}
+                    color="text.primary"
+                    variant={"h5"} >
+                    {comedianProp.first_name}
+                  </Typography>
+                </Grid>
+                <div style={{ width: "8px" /* Adjust as needed for spacing */ }}>
+                    <Grid item></Grid>
+                </div>
 
-                                color="text.primary" variant={"h5"} >
-                                {comedianProp.first_name}
-                            </Typography>
-
-                            <Typography className="typo" xs={{ fontSize: "2vh" }}
-                                color="text.primary" variant={"h5"} >
-                                {comedianProp.last_name}
-                            </Typography>
-                        </Grid>
-
-                        <Grid item  >
-                            <Tooltip title="Favorite">
-                                <IconButton aria-label="add to favorites">
-                                    <FavoriteIcon color="secondary" onClick={() => addFavorite(comedianProp.id)} />
-                                </IconButton>
-                            </Tooltip>
-                        </Grid>
-
-                    </Grid>
-                    {/* 
+                <Grid item>
+                <Grid item></Grid>
+                  <Typography
+                    className="typo"
+                    xs={{ fontSize: "2vh" }}
+                    color="text.primary"
+                    variant={"h5"} >
+                    {comedianProp.last_name}
+                  </Typography>
+                </Grid>
+              </Grid>
+              {/* 
 
                     <Tooltip title="Favorite">
                             <IconButton aria-label="add to favorites">
                                 <FavoriteIcon color="secondary" onClick={() => addFavorite(comedianProp.id)} />
                             </IconButton>
                         </Tooltip> */}
-                    {/* <Button aria-label="settings"
+              {/* <Button aria-label="settings"
                         color='fifthBlack'>
                         {comedianProp.first_name} {comedianProp.last_name}
                     </Button> */}
 
-                    <Grid container
-                        justifyContent="space-evenly"
-                        alignItems="center"
-                    >
-                        <Tooltip title={comedianProp.city}>
+              <Grid container justifyContent="space-evenly" alignItems="center">
+                      <Tooltip title="Comedian Details">
+                        <IconButton
+                          aria-label="settings"
+                          onClick={() => clickIcon(comedianProp.id)}
+                        >
+                          <InfoIcon color="primary" />
+                        </IconButton>
+                      </Tooltip>
+                
 
-                            <Link a href={google + comedianProp.city} color="inherit">
-                                {/* <Button component={Link} to={google + favoriteProp.city}
+                <Tooltip title={comedianProp.city}>
+                  <Link a href={google + comedianProp.city} color="inherit">
+                    {/* <Button component={Link} to={google + favoriteProp.city}
                             variant="inherit"> */}
 
-                                <IconButton aria-label="settings">
-                                    <a href={google + comedianProp.city}
-                                        className="link"
-                                        target="_blank">
-                                        <LocationOnIcon color="forth">
-                                        </LocationOnIcon>
-                                    </a>
-                                </IconButton>
-                                {/* </Button> */}
-                            </Link>
-                        </Tooltip>
+                    <IconButton aria-label="settings">
+                      <a
+                        href={google + comedianProp.city}
+                        className="link"
+                        target="_blank"
+                      >
+                        <LocationOnIcon color="forth"></LocationOnIcon>
+                      </a>
+                    </IconButton>
+                    {/* </Button> */}
+                  </Link>
+                </Tooltip>
 
+                <Tooltip title="Favorite">
+                    <IconButton aria-label="add to favorites">
+                    <FavoriteIcon
+                        color="secondary"
+                        onClick={() => addFavorite(comedianProp.id)}
+                    />
+                    </IconButton>
+                </Tooltip>
 
-                        <Tooltip title="Comedian Details">
-                            <IconButton aria-label="settings" onClick={() => clickIcon(comedianProp.id)} >
-                                <InfoIcon color="primary" />
-                            </IconButton>
-                        </Tooltip>
-
-                        {/* <Tooltip title="Favorite">
+                {/* <Tooltip title="Favorite">
                             <IconButton aria-label="add to favorites">
                                 <FavoriteIcon color="secondary" onClick={() => addFavorite(comedianProp.id)} />
                             </IconButton>
                         </Tooltip> */}
-                        {/* <Tooltip title="Favorite">
+                {/* <Tooltip title="Favorite">
                             <IconButton aria-label="add to favorites">
                                 <FavoriteIcon onClick={() => addFavorite(comedianProp.id)} />
                             </IconButton>
                         </Tooltip> */}
+              </Grid>
+            </Typography>
 
-                    </Grid>
-                </Typography>
-
-                <CardActions disableSpacing>
-                    {/* <IconButton aria-label="share">
+            <CardActions disableSpacing>
+              {/* <IconButton aria-label="share">
           <ShareIcon />
         </IconButton> */}
-                </CardActions>
-
-            </Card>
+            </CardActions>
+          </Card>
         </Grid>
-    </>
-
-    )
+      </>
+    );
 }
 
 
