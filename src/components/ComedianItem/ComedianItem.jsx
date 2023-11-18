@@ -49,6 +49,16 @@ function ComedianItem({ comedianProp }) {
     }
 
 
+    // ------ ComedianProp Test ------ // 
+    function comedianPropTest({comedianProp}) {
+      if (comedianProp && comedianProp.name.first_name)
+        console.log('comedianProp & name.first_name WORKING:', comedianProp, comedianProp.name.first_name);
+      else if (comedianProp)
+        console.log('comedianProp WORKING', comedianProp);
+      else 
+        console.log('comedianProp & name.first_name BROKEN');
+    }
+    comedianPropTest(comedianProp);
 
 
     // ------ FAVORITE BUTTONS ------ // 
@@ -109,7 +119,8 @@ function ComedianItem({ comedianProp }) {
               component="img"
               height="194"
               image={comedianProp.icon}
-              alt={comedianProp.name}
+              alt={comedianProp.first_name+'-'+comedianProp.last_name}
+              // -- comedianProp.name, comedianProp.last_name & comedianProp.first_name are all on the SAME object level. 
             />
 
             {/* <CardHeader align="center" className="name"
@@ -149,7 +160,8 @@ function ComedianItem({ comedianProp }) {
                     className="typo"
                     xs={{ fontSize: "2vh" }}
                     color="text.primary"
-                    variant={"h5"} >
+                    variant={"label1"} 
+                    >
                     {comedianProp.first_name}
                   </Typography>
                 </Grid>
@@ -163,7 +175,7 @@ function ComedianItem({ comedianProp }) {
                     className="typo"
                     xs={{ fontSize: "2vh" }}
                     color="text.primary"
-                    variant={"h5"} >
+                    variant={"label1"} >
                     {comedianProp.last_name}
                   </Typography>
                 </Grid>
@@ -183,7 +195,7 @@ function ComedianItem({ comedianProp }) {
               <Grid container justifyContent="space-evenly" alignItems="center">
                       <Tooltip title="Comedian Details">
                         <IconButton
-                          aria-label="settings"
+                          aria-label="Comedian Details"
                           onClick={() => clickIcon(comedianProp.id)}
                         >
                           <InfoIcon color="primary" />
@@ -192,11 +204,11 @@ function ComedianItem({ comedianProp }) {
                 
 
                 <Tooltip title={comedianProp.city}>
-                  <Link a href={google + comedianProp.city} color="inherit">
+                  <Link a href={google + comedianProp.city} color="inherit" aria-label="Comedian location">
                     {/* <Button component={Link} to={google + favoriteProp.city}
                             variant="inherit"> */}
 
-                    <IconButton aria-label="settings">
+                    <IconButton aria-label="Comedian Details">
                       <a
                         href={google + comedianProp.city}
                         className="link"
@@ -210,10 +222,12 @@ function ComedianItem({ comedianProp }) {
                 </Tooltip>
 
                 <Tooltip title="Favorite">
-                    <IconButton aria-label="add to favorites">
+                    <IconButton aria-label="add to favorites"
+                    onClick={() => addFavorite(comedianProp.id)}
+                    >
                     <FavoriteIcon
                         color="secondary"
-                        onClick={() => addFavorite(comedianProp.id)}
+                        // onClick={() => addFavorite(comedianProp.id)}
                     />
                     </IconButton>
                 </Tooltip>

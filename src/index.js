@@ -11,6 +11,17 @@ import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
 import { red, blue, green, purple, yellow, orange } from '@mui/material/colors';
 
 const theme = createTheme({
+// --  typography --> specific to React Element '<typography>' -- //
+  typography: {
+    label1: {
+      fontSize: 23,
+      light: '#33b7ff',
+      main: '#005B94', // was #00a6ff. Changed to pass contrast ratio standards 
+      dark: '#0074b2',
+    }  
+  },
+
+  // -- pallette --> is the default global color scheme. -- // 
   palette: {
     primary: {
       light: '#33b7ff',
