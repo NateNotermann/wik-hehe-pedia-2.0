@@ -1,24 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-    <link rel="manifest" href="app.webmanifest">
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ffffff"/>
     <meta name="description" content="Explore a dynamic full-stack application designed for 
     discovering and managing your favorite comedians effortlessly. Utilizing comprehensive search functionalities,
     users can easily find comedians by first name, last name, keywords, or location. 
     Discover a rich database featuring inks to comedians' social media profiles on platforms like Instagram, Twitter, YouTube, and more. 
     Seamlessly save your preferred comedians to a personalized list for quick future reference. 
     Engage with a user-friendly platform that combines entertainment and functionality for an enjoyable and efficient experience.">
+    
     <title>App</title>
   </head>
   <body>
-    <link rel="shortcut icon" href="/public/favicon.gif" type="image/x-icon">
-    <link rel="icon" href="/public/favicon.gif" type="image/x-icon" />
+    <!-- <link rel="shortcut icon" href="/public/favicon.gif" type="image/x-icon">
+    <link rel="icon" href="/public/favicon.gif" type="image/x-icon" /> -->
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="react-root"></div>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/service-worker.js')
+          .then((registration) => {
+          console.log('Service Worker registered with scope:', registration.scope);
+      })
+          .catch((error) => {
+              console.log('Service Worker registration FAILED. Error:', error);
+      });
+      //     )
+      //     console.log('S-W Registered');
+      // }
+      // else {
+      //     console.log('S-W NOT REGISTERED');
+      }
+      
+  </script>
   </body>
 </html>

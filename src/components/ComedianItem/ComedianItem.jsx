@@ -50,15 +50,15 @@ function ComedianItem({ comedianProp }) {
 
 
     // ------ ComedianProp Test ------ // 
-    function comedianPropTest({comedianProp}) {
-      if (comedianProp && comedianProp.name.first_name)
-        console.log('comedianProp & name.first_name WORKING:', comedianProp, comedianProp.name.first_name);
-      else if (comedianProp)
-        console.log('comedianProp WORKING', comedianProp);
-      else 
-        console.log('comedianProp & name.first_name BROKEN');
-    }
-    comedianPropTest(comedianProp);
+    // function comedianPropTest({comedianProp}) {
+    //   if (comedianProp && comedianProp.name.first_name)
+    //     console.log('comedianProp & name.first_name WORKING:', comedianProp, comedianProp.name.first_name);
+    //   else if (comedianProp)
+    //     console.log('comedianProp WORKING', comedianProp);
+    //   else 
+    //     console.log('comedianProp & name.first_name BROKEN');
+    // }
+    // comedianPropTest(comedianProp);
 
 
     // ------ FAVORITE BUTTONS ------ // 
