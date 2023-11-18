@@ -2,7 +2,7 @@
     "name": "Wik-HEHE-Pedia",
     "short_name": "Wik-HEHE-Pedia",
     "description": "Comedian index app",
-    "start_url": "/home=true",
+    "start_url": "/#/home",
 
     "icons": [
         {
