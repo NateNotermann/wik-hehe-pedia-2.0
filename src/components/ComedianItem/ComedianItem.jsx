@@ -56,7 +56,7 @@ function ComedianItem({ comedianProp }) {
     // function to add a favorite 
     const addFavorite = (comedian_id) => {
 
-        console.log('Add Favorite:', comedian_id, 'user.id:', user_id);
+        console.log('Add Favorite:', comedian_id, 'user.id:', user_id, 'comedianProp.name:', comedianProp.name);
         // console.log('id!', id);
         dispatch({
             type: 'ADD_FAVORITE',
