@@ -6,19 +6,19 @@
 
     "icons": [
         {
-            "src": "public/icon512.png",
+            "src": "icon512.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any maskable"
         },
         {
-            "src": "public/icon144.png",
+            "src": "icon144.png",
             "sizes": "144x144",
             "type": "image/png",
-            "purpose": "any maskable"
+            "purpose": "any"
         },
         {
-            "src": "public/icon144.png",
+            "src": "icon144.png",
             "sizes":"144x144",
             "type": "image/png",
             "purpose": "maskable"
