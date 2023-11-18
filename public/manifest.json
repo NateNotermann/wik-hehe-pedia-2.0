@@ -2,31 +2,30 @@
     "name": "Wik-HEHE-Pedia",
     "short_name": "Wik-HEHE-Pedia",
     "description": "Comedian index app",
-    "theme_color": "#ffffff",
-    "background_color": "#2196f3",
-    "display": "standalone",
-    "scope": "/",
-    "start_url": "/#/home",
+    "start_url": "/home=true",
 
     "icons": [
         {
-            "src": "icon512.png",
+            "src": "public/icon512.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any maskable"
         },
         {
-            "src": "icon144.png",
+            "src": "public/icon144.png",
             "sizes": "144x144",
             "type": "image/png",
             "purpose": "any maskable"
         },
         {
-            "src":"icon144.png",
+            "src": "public/icon144.png",
             "sizes":"144x144",
             "type": "image/png",
             "purpose": "maskable"
         }
-    ]
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
   }
   
