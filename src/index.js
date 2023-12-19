@@ -25,7 +25,7 @@ const theme = createTheme({
   palette: {
     primary: {
       light: '#33b7ff',
-      main: '#005B94', // was #00a6ff. Changed to pass contrast ratio standards 
+      main: '#33b7ff', // was #00a6ff. Changed to pass contrast ratio standards 
       dark: '#0074b2',
     },
     secondary: {  
@@ -68,7 +68,7 @@ const theme = createTheme({
       main: red[500]
     },
     text: {
-      primary: '#005B94', // was #00a6ff. Changed to pass contrast ratio standards 
+      primary: '#00a6ff', // was #00a6ff. Changed to '#005B94' pass contrast ratio standards, but decided to change back when realizing the contrast to the input field text was to similar.
       secondary: '#e64693',
       // primary: '#fafafa',
       // secondary: '#212121',
