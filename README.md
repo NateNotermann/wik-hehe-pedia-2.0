@@ -8,7 +8,7 @@ I wanted to create full-stack application that allows users to search an index o
 The goal was to build an application which utilizes the full stack C.R.U.D. functions(Create, Read, Update, Delete) in order to run database requests, render items to the dom, and create a responsive and immersive experience within the app. 
 
 
-To see the fully functional site, please visit: [Wiki-hehe-pedia](https://wiki-hehe-pedia2-c36340d55df4.herokuapp.com/#/home)
+To see the fully functional site, please visit this link: [Wiki-hehe-pedia](https://wiki-hehe-pedia2-c36340d55df4.herokuapp.com/#/home)
 <br>
 
 ### Languages and Programs:
