@@ -68,8 +68,8 @@ const theme = createTheme({
       main: red[500]
     },
     text: {
-      primary: '#00a6ff', // was #00a6ff. Changed to '#005B94' pass contrast ratio standards, but decided to change back when realizing the contrast to the input field text was to similar.
-      secondary: '#e64693',
+      primary: '#00a6ff', // ---- This is PRIMARY TEXT COLOR attribute. ----was #00a6ff. Changed to '#005B94' and then changed BACK. PWA wants more contrast than '#00a6ff'. 
+      secondary: '#e64693', // Dark blue --> '#0074b2'.  Hot Pink --> '#e64693'
       // primary: '#fafafa',
       // secondary: '#212121',
     }
