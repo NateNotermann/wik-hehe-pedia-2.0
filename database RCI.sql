@@ -232,79 +232,20 @@ Community Internal Medicine - serves individuals 18 years of age or older for al
 
 
 --  PROVIDER Dummy Data --
-INSERT INTO "provider" ( "user_id", "name", "bio", "picture","phone", "email", "availability", "group_id") VALUES
-(12, 
-'Helayna M. Abraham, M.D.', 
-'Community Internal Medicine, Geriatrics and Palliative Care',
- 'https://communityhealth.mayoclinic.org/-/media/staff/helaynaabraham30024723.jpg?la=en&hash=203B4CD411907680EC68651CF5E3773B', 
- '507-832-8554', 'Abraham@gmail.com', 
- 'M-F, 8am to 5pm', 
- 1),
- (13, 
-'Katarina Alajbegovic, M.D.', 
-'Community Pediatric and Adolescent Medicine',
- 'https://communityhealth.mayoclinic.org/-/media/staff/katarinaalajbegovic30082008.jpg?la=en&hash=E579C97A8A67E15BE48386CC0C790719', 
- '507-832-8554', 'Alajbegovic@gmail.com', 
- 'M-F, 8am to 5pm', 
- 1),
-  (14, 
-'Aldo A. Acosta Medina, M.D.', 
-'Community Internal Medicine, Geriatrics and Palliative Care',
- 'https://communityhealth.mayoclinic.org/-/media/staff/aldoacostamedina21318280.jpg?la=en&hash=FF67279A31B6DD84475ED17A985F8BC6', 
- '507-832-8551', 'Medina@gmail.com', 
- 'M-F, 8am to 5pm', 
- 1),
- (15, 
-'Afia B. Adu-Gyamfi, M.D.', 
-'Community Pediatric and Adolescent Medicine',
- 'https://communityhealth.mayoclinic.org/-/media/staff/alexandraalejos30189266.jpg?la=en&hash=185B6842E486CB59CE0DF799BD7462D2', 
- '507-832-8552', 'Gyamfi@gmail.com', 
- 'M-F, 8am to 5pm', 
- 1),
 
-  (16, 
-'Ryan Alexander, M.D.', 
-'Community Internal Medicine, Geriatrics and Palliative Care',
- 'https://communityhealth.mayoclinic.org/-/media/staff/afiaadugyamfi30185760.jpg?la=en&hash=747A16D94F256239ED995F10D86C610F', 
- '507-832-8552', 'Gyamfi@gmail.com', 
- 'M-F, 8am to 5pm', 
- 1),
-  (17, 
-'Stephanie L. Ahrens, APRN, C.N.P., M.S.N.', 
-'Family Medicine',
- 'https://communityhealth.mayoclinic.org/-/media/staff/stephanieahrens14604302.jpg?la=en&hash=87BBE98D282DF553890D090B0E93C663', 
- '507-832-8553', 'Ahrens@gmail.com', 
- 'M-F, 8am to 5pm', 
- 1),
-   (18, 
-'Asma Ali, M.B.B.S.', 
-'Community Pediatric and Adolescent Medicine',
- 'https://communityhealth.mayoclinic.org/-/media/staff/asmaali21308675.jpg?la=en&hash=1A2F054DF00651B6DAAC3F5BD8294EF3', 
- '507-832-8553', 'Ali@gmail.com', 
- 'M-F, 8am to 5pm', 
- 1),
-   (19, 
-'Mohamad Saleh Alabdaljabar, M.B.B.S.', 
-'Community Internal Medicine, Geriatrics and Palliative Care',
- 'https://communityhealth.mayoclinic.org/-/media/staff/mohamadsalehalabdaljabar21078394.jpg?la=en&hash=6B4666D72F832F75AF662E8E39105153', 
- '507-832-8553', 'Alabdaljabar@gmail.com', 
- 'M-F, 8am to 5pm', 
- 1),
-   (20, 
-'Jay-Sheree P. Allen, M.D.', 
-'Family Medicine',
- 'https://communityhealth.mayoclinic.org/-/media/staff/jayshereeallen16124308.jpg?la=en&hash=7A39C047BE5B76F365278E5787AC3465', 
- '507-832-8553', 'Allen@gmail.com', 
- 'M-F, 8am to 5pm', 
- 1),
-   (21, 
-'Badro (Badra) Ali, M.D.', 
-'Family Medicine',
- 'https://communityhealth.mayoclinic.org/-/media/staff/badroali30082325.jpg?la=en&hash=39E337E230F43FE63363E6CA51644DF5', 
- '507-832-8543', 'Badra@gmail.com', 
- 'M-F, 8am to 5pm', 
- 1)
- ;
+INSERT INTO "provider" ("id","user_id","name","bio","picture","phone","email","availability","group_id")
+VALUES
+(1,12,'Dr. Carla Espinosa, M.D.','Community Internal Medicine, Geriatrics and Palliative Care','https://communityhealth.mayoclinic.org/-/media/staff/taylorcammack30082321.jpg?sc_lang=en&la=en&hash=7A74380D17A29047A30F823A254F918B','507-832-8554','Espinosa@gmail.com','M-F, 8am to 5pm',1),
+(2,13,'Dr. Christopher Turk, M.D.','Community Pediatric and Adolescent Medicine','https://communityhealth.mayoclinic.org/-/media/staff/freddavis30188707.jpg?sc_lang=en&la=en&hash=EB8B0262109E5C86B94E7B52F4736AA0','507-832-8554','Christopher@gmail.com','M-F, 8am to 5pm',1),
+(3,14,'Dr. Elliot Reid M.D.','Community Internal Medicine, Geriatrics and Palliative Care','https://communityhealth.mayoclinic.org/-/media/staff/taylorcammack30082321.jpg?sc_lang=en&la=en&hash=7A74380D17A29047A30F823A254F918B','507-832-8551','Reid@gmail.com','M-F, 8am to 5pm',1),
+(4,15,'Dr. John Dorian, M.D.','Community Pediatric and Adolescent Medicine','https://communityhealth.mayoclinic.org/-/media/staff/jacobbillings16232925.jpg?sc_lang=en&la=en&hash=B7230957910C81A36FFECF53CD0CA719','507-832-8552','Dorian@gmail.com','M-F, 8am to 5pm',1),
+(5,16,'Dr. Kim Briggs, M.B.B.S.','Community Internal Medicine, Geriatrics and Palliative Care','https://communityhealth.mayoclinic.org/-/media/staff/asmaali21308675.jpg?la=en&hash=1A2F054DF00651B6DAAC3F5BD8294EF3','507-832-8552','Briggs@gmail.com','M-F, 8am to 5pm',1),
+(6,17,'Dr. Molly Clock, M.D.','Family Medicine','https://communityhealth.mayoclinic.org/-/media/staff/hopebrus30188712.jpg?sc_lang=en&la=en&hash=4AEAEEECEB6B090A5058D680C2CF6937','507-832-8553','Clock@gmail.com','M-F, 8am to 5pm',1),
+(7,18,'Dr. Nan Roberts, M.D.','Community Pediatric and Adolescent Medicine','https://communityhealth.mayoclinic.org/-/media/staff/badroali30082325.jpg?la=en&hash=39E337E230F43FE63363E6CA51644DF5','507-832-8553','Roberts@gmail.com','M-F, 8am to 5pm',1),
+(8,19,'Dr. Nate Notermann, M.D.','Community Internal Medicine, Geriatrics and Palliative Care','https://avatars.githubusercontent.com/u/98718660?v=4','507-832-8553','note@gmail.com','M-F, 8am to 5pm',1),
+(9,20,'Dr. Perry Cox, M.D.','Family Medicine','https://communityhealth.mayoclinic.org/-/media/staff/aldoacostamedina21318280.jpg?la=en&hash=FF67279A31B6DD84475ED17A985F8BC6','507-832-8553','Cox@gmail.com','M-F, 8am to 5pm',1),
+(10,21,'John Smith M.D.','I am an example provider.','https://static.vecteezy.com/system/resources/thumbnails/007/319/936/small/user-profile-icon-vector.jpg','507-832-8543','Smith@gmail.com','M-F, 8am to 5pm',1);
+
 
 
 -- provider_specializations JUNCTION TABLE DUMMY DATA --  
@@ -394,10 +335,10 @@ INSERT INTO "provider_occupation" ( "provider_id", "occupation_id") VALUES
 
 ----------------------------- DELETE PROVIDER & GROUP ---------------------------------------
 ---- Code to TEST the different DELETE ----
-DELETE FROM "user" WHERE "id" = 13;
-DELETE FROM "provider" WHERE "id" = 3;
-DELETE FROM "group" WHERE "id" = 3;
---------------------------------------------------------------------------------------- 
+-- DELETE FROM "user" WHERE "id" = 13;
+-- DELETE FROM "provider" WHERE "id" = 3;
+-- DELETE FROM "group" WHERE "id" = 3;
+-- --------------------------------------------------------------------------------------- 
 
 --------------------- GET/SELECTS for PROVIDER/GROUP LIST & DROP DOWNS ---------------------
 
@@ -713,17 +654,17 @@ WHERE provider.user_id = 7;
 
 
 -----! DELETE/DROP TABLES !-----
-DROP TABLE "provider_specializations";
-DROP TABLE "provider_insurance_plan";
-DROP TABLE "provider_service_type";
-DROP TABLE "provider_occupation";
-DROP TABLE "specializations";
-DROP TABLE "insurance_plan";
-DROP TABLE "service_type";
-DROP TABLE "occupations";
-DROP TABLE "provider";
-DROP TABLE "group";
-DROP TABLE "user";
+-- DROP TABLE "provider_specializations";
+-- DROP TABLE "provider_insurance_plan";
+-- DROP TABLE "provider_service_type";
+-- DROP TABLE "provider_occupation";
+-- DROP TABLE "specializations";
+-- DROP TABLE "insurance_plan";
+-- DROP TABLE "service_type";
+-- DROP TABLE "occupations";
+-- DROP TABLE "provider";
+-- DROP TABLE "group";
+-- DROP TABLE "user";
 -----! DELETE/DROP TABLES !-----
 
 SELECT "provider"."id", "provider"."name", "provider"."picture", "provider"."phone", "provider"."email", "specializations"."specialization"
