@@ -13,6 +13,7 @@ let config = {};
 if (process.env.DATABASE_URL) {
   // Heroku gives a url, not a connection object
   // https://github.com/brianc/node-pg-pool
+  try {
   const params = url.parse(process.env.DATABASE_URL);
   const auth = params.auth.split(':');
 
@@ -24,16 +25,26 @@ if (process.env.DATABASE_URL) {
     database: params.pathname.split('/')[1],
     ssl: { rejectUnauthorized: false },
     max: 10, // max number of clients in the pool
-    idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
+    idleTimeoutMillis: 10000, // how long a client is allowed to remain idle before being closed
   };
+    console.log('connected to remote database');
+    // console.log('connected via DATABASE_URL: ', process.env.DATABASE_URL);
+  } catch (error) {
+    console.log('ERROR in pg pool. Cannot connect to remote database. Error:', error);
+  }
 } else {
-  config = {
-    host: 'localhost', // Server hosting the postgres database
-    port: 5432, // env var: PGPORT
-    database: 'wik-hehe-pedia-2.0', // CHANGE THIS LINE! env var: PGDATABASE, this is likely the one thing you need to change to get up and running
-    max: 10, // max number of clients in the pool
-    idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
-  };
+    try {
+      config = {
+        host: 'localhost', // Server hosting the postgres database
+        port: 5432, // env var: PGPORT
+        database: 'wik-hehe-pedia-2.0', // CHANGE THIS LINE! env var: PGDATABASE, this is likely the one thing you need to change to get up and running
+        max: 10, // max number of clients in the pool
+        idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
+      };
+      console.log('connected to localhost');
+    } catch (error) {
+      console.log('ERROR in pg pool. Cannot connect to localhost. Error:', error);
+    }
 }
 
 // this creates the pool that will be shared by all other modules
