@@ -4,6 +4,11 @@
 
 ---------- START -- COPY --- AND -- PASTE -- HERE ----------
 
+
+---------- CREATE DATABASE ----------
+CREATE DATABASE "wik-hehe-pedia-2.0";
+
+
 ------ CREATE TABLES ------
 -- CREATE USER TABLE --
 CREATE TABLE "user" (
