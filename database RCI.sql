@@ -3,6 +3,9 @@
 ---- USER TABLE  --
 -- added user access level
 -- user defaults to level 2 (Group & Provider)
+
+CREATE DATABASE "client_project";
+
 CREATE TABLE "user" (
 	"id" SERIAL PRIMARY KEY,
 	"username" varchar(25) NOT NULL UNIQUE,

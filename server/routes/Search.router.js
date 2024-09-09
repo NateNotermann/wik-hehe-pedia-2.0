@@ -9,6 +9,7 @@ const router = express.Router();
 router.get('/:className/:searchItem', (req, res) => {
   const column = req.params.className;
   const searchItem = req.params.searchItem;
+  const test = "string";
   // const {
   //   className, 
   //   searchItem, 
